@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapsActivity">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="1.0" />
+    <EditText
+        android:id="@+id/edtNameLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:hint="Nhập tên vị trí"
+        android:inputType="textPersonName"
+        android:textColor="#00b894"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtLat"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="Enter Lat"
+        android:inputType="numberDecimal"
+        android:textColor="#00b894"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/edtLng"
+        android:layout_width="186dp"
+        android:layout_height="60dp"
+        android:ems="10"
+        android:hint="Enter Lng"
+        android:inputType="numberDecimal"
+        android:textColor="#00b894"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.448"
+        map:layout_constraintStart_toEndOf="@+id/edtLat"
+        map:layout_constraintTop_toTopOf="parent"
+        map:layout_constraintVertical_bias="0.086" />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="@+id/map"
+        map:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:onClick="btnThemMarker"
+            android:textColor="#34495e"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="8dp"
+            android:background="#55efc4"
+            android:text="THÊM" />
+
+        <Button
+            android:onClick="btnSuaMarker"
+            android:textColor="#34495e"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="8dp"
+            android:background="#55efc4"
+            android:text="SỬA" />
+
+        <Button
+            android:onClick="btnXoaMarker"
+            android:textColor="#34495e"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginRight="8dp"
+            android:background="#55efc4"
+            android:text="XÓA" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
